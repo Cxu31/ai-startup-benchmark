@@ -1,0 +1,185 @@
+{
+  "schema_version": "2.0.0",
+  "id": "cursor",
+  "name": "Cursor",
+  "legal_name": "Anysphere, Inc.",
+  "website": "https://cursor.com",
+  "founded_year": 2022,
+  "hq": {
+    "city": "San Francisco",
+    "region": "CA",
+    "country": "US"
+  },
+  "status": "active",
+  "summary": "Cursor is an AI-assisted code editor for professional software development, combining IDE workflows with coding assistance and agent-style features.",
+  "tags": ["developer-tools", "ai-coding", "ide", "application"],
+  "product": {
+    "one_liner": "AI-assisted code editor for professional software development",
+    "layer": "application",
+    "delivery": "saas",
+    "description": "Cursor provides a code editing environment with integrated AI assistance. Public product and docs surfaces describe capabilities including agent workflows, rules, MCP, skills, CLI, code completion, chat over a codebase, and multi-file edits inside the editor.",
+    "key_capabilities": [
+      "AI-assisted code editor",
+      "codebase-aware chat",
+      "multi-file edits",
+      "agent-style coding workflows",
+      "docs-covered tooling (rules, MCP, skills, CLI)"
+    ]
+  },
+  "market": {
+    "customer_type": "developer",
+    "primary_persona": "Professional software engineer",
+    "category": "AI developer tools",
+    "problem": "Developers want faster coding and editing while keeping repository context inside their primary development environment",
+    "geo_focus": ["global"]
+  },
+  "business_model": {
+    "primary": "subscription",
+    "notes": "Public pricing lists individual and business/team subscription plans. Plan pages describe feature and usage differences by tier.",
+    "pricing_visibility": "public"
+  },
+  "ai_profile": {
+    "centrality": "core",
+    "dependency": "mixed",
+    "model_strategy": "Editor product orchestrates model-backed coding assistance, chat, and agent workflows; public materials emphasize product integration rather than owning a frontier base model",
+    "data_advantage": "Potential advantage from IDE interaction loops and codebase context workflows; extent of proprietary data advantage is not fully public",
+    "notes": "AI capability is structural: completion, chat, edits, and agents are core to the product. Without model-backed assistance, the offering collapses to a conventional editor fork."
+  },
+  "traction": {
+    "signals": [
+      {
+        "label": "product_surface",
+        "value": "Public product site, downloadable editor offering, and documentation site are live",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-003"]
+      },
+      {
+        "label": "distribution_channels",
+        "value": "Website provides product signup/download paths for the editor",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001"]
+      },
+      {
+        "label": "developer_activity",
+        "value": "Public docs cover agent, rules, MCP, skills, and CLI surfaces for developers",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-003"]
+      },
+      {
+        "label": "monetization_signals",
+        "value": "Public subscription pricing tiers are listed",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-002"]
+      }
+    ],
+    "notes": "No ARR, seat counts, or download metrics are included. community_signals and hiring_signals are omitted until sourced. Category popularity claims are omitted. product_led is not claimed: website signup/download exists, but PLG expansion mechanics are not evidenced beyond direct web access."
+  },
+  "funding": {
+    "total_raised_usd": null,
+    "latest_round": null,
+    "latest_round_date": null,
+    "notable_investors": [],
+    "notes": "TechCrunch (2023-10-11) reported an OpenAI Startup Fund-led seed, but later rounds and totals are inconsistently reported elsewhere. Numeric fields remain null until a dated, complete funding snapshot is attached.",
+    "evidence_ids": ["ev-004"]
+  },
+  "framework_scores": {
+    "product": {
+      "value": 4,
+      "rationale": "Judgment: coherent AI editor product with clear core workflows on the product site and matching developer docs.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "high"
+    },
+    "market": {
+      "value": 4,
+      "rationale": "Judgment: AI developer tools is a clear, active category with identifiable peers. Capped at 4: company site + one news article do not meet the category-evidence bar for 5.",
+      "evidence_ids": ["ev-001", "ev-004"],
+      "confidence": "medium"
+    },
+    "business_model": {
+      "value": 4,
+      "rationale": "Judgment: public subscription pricing provides a clear monetization path.",
+      "evidence_ids": ["ev-002"],
+      "confidence": "high"
+    },
+    "technology": {
+      "value": 3,
+      "rationale": "Judgment (application layer): meaningful editor orchestration, context, and agent workflows versus peers; not frontier-model ownership. Calibrated against other AI developer tools, not model labs.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "high"
+    },
+    "growth": {
+      "value": null,
+      "rationale": "Not scored: no sourced seats, revenue, or usage metrics in this entry.",
+      "evidence_ids": [],
+      "confidence": "high"
+    },
+    "competitive_position": {
+      "value": 3,
+      "rationale": "Judgment (application layer): visible contender among AI coding products; defensibility versus Copilot/IDE incumbents and peer agents remains uncertain.",
+      "evidence_ids": ["ev-001", "ev-004"],
+      "confidence": "medium"
+    }
+  },
+  "evidence": [
+    {
+      "id": "ev-001",
+      "type": "company_website",
+      "url": "https://cursor.com",
+      "title": "Cursor homepage",
+      "publisher": "Cursor",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Product overview for the AI-assisted code editor and core workflows; provides public product access paths.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-002",
+      "type": "pricing_page",
+      "url": "https://cursor.com/pricing",
+      "title": "Cursor pricing",
+      "publisher": "Cursor",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public subscription plans for individuals and businesses.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-003",
+      "type": "docs",
+      "url": "https://docs.cursor.com",
+      "title": "Cursor documentation",
+      "publisher": "Cursor",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public docs covering Agent, Rules, MCP, Skills, and CLI product surfaces.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-004",
+      "type": "news_article",
+      "url": "https://techcrunch.com/2023/10/11/anysphere-raises-8m-from-openai-to-build-an-ai-powered-ide/",
+      "title": "Anysphere raises $8M from OpenAI to build an AI-powered IDE",
+      "publisher": "TechCrunch",
+      "published_at": "2023-10-11",
+      "accessed_at": "2026-07-20",
+      "snippet": "Names Anysphere as Cursor’s company; lists co-founders Michael Truell, Sualeh Asif, Arvid Lunnemark, and Aman Sanger; describes Cursor as an AI-native IDE / VS Code fork.",
+      "confidence": "high"
+    }
+  ],
+  "team": {
+    "founders": ["Michael Truell", "Sualeh Asif", "Arvid Lunnemark", "Aman Sanger"],
+    "notes": "Founders sourced from TechCrunch coverage of Anysphere/Cursor (ev-004). Not a complete org chart."
+  },
+  "competitors": ["github-copilot", "windsurf", "replit-agent", "devin"],
+  "last_reviewed": "2026-07-20",
+  "reviewers": ["hn-ready-pass"],
+  "extensions": {
+    "company_stage": "unknown",
+    "market_position": "AI-native code editor competing in AI developer tools against assistants, agent products, and IDE-integrated offerings",
+    "differentiation": "Public positioning centers on an AI-first editor workflow rather than a plugin bolted onto a traditional IDE; durability of that differentiation versus peers is not measured here",
+    "distribution_channels": ["direct_web"],
+    "confidence_score": 4,
+    "confidence_notes": "Product, docs, pricing, and founder identity are now primary-sourced. Funding totals, growth metrics, community intensity, and hiring remain weakly evidenced. product_led removed: self-serve signup exists, but PLG expansion mechanics are not evidenced beyond direct web access.",
+    "adjacent_products": ["lovable"]
+  }
+}

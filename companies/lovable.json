@@ -1,0 +1,225 @@
+{
+  "schema_version": "2.0.0",
+  "id": "lovable",
+  "name": "Lovable",
+  "legal_name": null,
+  "website": "https://lovable.dev",
+  "founded_year": 2023,
+  "hq": {
+    "city": "Stockholm",
+    "region": null,
+    "country": "SE"
+  },
+  "status": "active",
+  "summary": "Lovable is an AI-native application platform for building, iterating on, and deploying web apps from natural-language descriptions, with generated code that can be edited and synced to Git.",
+  "tags": ["ai-app-builder", "vibe-coding", "application", "full-stack", "no-code-adjacent"],
+  "product": {
+    "one_liner": "AI app builder for creating and shipping web apps by chatting with AI",
+    "layer": "application",
+    "delivery": "saas",
+    "description": "Lovable provides a browser-based workflow where users describe an app or website, review a live-built prototype, refine it through feedback, and publish. Public documentation describes generation of frontend, backend, database, authentication, and integrations as editable code, with workspace collaboration, Git sync (GitHub/GitLab), and deployment/hosting options including custom domains on paid plans.",
+    "key_capabilities": [
+      "natural-language app and website generation",
+      "iterative chat-based refinement",
+      "full-stack web app scaffolding with editable code",
+      "workspace collaboration and shared credit pools",
+      "Git sync and code download on paid plans",
+      "publish/deploy with custom domains on paid plans"
+    ]
+  },
+  "market": {
+    "customer_type": "mixed",
+    "primary_persona": "Founders, makers, product/design/GTM operators, and developers prototyping or shipping web apps",
+    "category": "AI app builders",
+    "problem": "Non-specialists and small teams want to turn product ideas into working web applications without starting from a blank codebase or assembling a full engineering stack first",
+    "geo_focus": ["global"]
+  },
+  "business_model": {
+    "primary": "mixed",
+    "notes": "Public plans include Free plus paid Pro, Business, and Enterprise tiers. Monetization combines subscription credit allowances with daily build credits and additional Cloud/AI usage grants; paid tiers start from documented credit packs (e.g. Pro from 100 credits/month). Not a pure per-seat model: docs describe credits shared across unlimited workspace members on Free/Pro/Business.",
+    "pricing_visibility": "public"
+  },
+  "ai_profile": {
+    "centrality": "core",
+    "dependency": "orchestration",
+    "model_strategy": "Product experience centers on model-backed generation and iterative editing of applications; public materials emphasize the AI building workflow rather than ownership of a frontier base model",
+    "data_advantage": "Potential advantage from prompt-to-app interaction loops, templates, and workspace usage patterns; extent of proprietary model or data advantage is not fully public",
+    "notes": "AI capability is structural: natural-language generation, refinement, and agent-style building are the product. Without model-backed generation, the offering collapses to a conventional app host or editor."
+  },
+  "traction": {
+    "signals": [
+      {
+        "label": "product_surface",
+        "value": "Public product site, docs, templates gallery, and signup flows are live",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-003"]
+      },
+      {
+        "label": "distribution_channels",
+        "value": "Direct web distribution with templates gallery and public project publishing surfaces",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001"]
+      },
+      {
+        "label": "developer_activity",
+        "value": "Docs describe GitHub/GitLab sync and code download on paid plans, indicating an engineering handoff path",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-002", "ev-003"]
+      },
+      {
+        "label": "community_signals",
+        "value": "Company maintains a public Discord community and community landing pages for builders",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-006", "ev-007"]
+      },
+      {
+        "label": "monetization_signals",
+        "value": "Public Free/Pro/Business/Enterprise plans with credit tiers and usage grants are documented",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-002", "ev-004"]
+      }
+    ],
+    "notes": "Homepage marketing counters and press ARR/user figures are omitted. Discord member-count marketing claims are omitted; community_signals records only the existence of official community surfaces. hiring_signals omitted until a sourced careers snapshot is attached."
+  },
+  "funding": {
+    "total_raised_usd": null,
+    "latest_round": null,
+    "latest_round_date": null,
+    "notable_investors": [],
+    "notes": "Secondary sources report large funding rounds and valuations with conflicting figures. Numeric fields remain null until a dated primary or high-quality secondary source is attached in evidence.",
+    "evidence_ids": []
+  },
+  "framework_scores": {
+    "product": {
+      "value": 4,
+      "rationale": "Judgment: clear AI-native app-builder workflow (describe → generate → refine → ship) with documented collaboration, Git sync, and publish paths. Calibrated with other application-layer builders, not model labs.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "high"
+    },
+    "market": {
+      "value": 4,
+      "rationale": "Judgment: AI app builders / vibe-coding is a clear, active category with identifiable peers. Capped at 4: company docs/site alone do not meet the category-evidence bar for 5.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "medium"
+    },
+    "business_model": {
+      "value": 4,
+      "rationale": "Judgment: freemium plus public subscription credit tiers and usage grants show a concrete monetization path; credit complexity may reduce pricing clarity for some buyers.",
+      "evidence_ids": ["ev-002", "ev-004"],
+      "confidence": "high"
+    },
+    "technology": {
+      "value": 3,
+      "rationale": "Judgment (application layer): meaningful orchestration, codegen, hosting, and product workflow versus app-builder peers; not frontier-model ownership. Within-layer peer frame, comparable to other AI software builders.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "high"
+    },
+    "growth": {
+      "value": null,
+      "rationale": "Not scored: no independently verified seats, ARR, or usage metrics are attached in this entry.",
+      "evidence_ids": [],
+      "confidence": "high"
+    },
+    "competitive_position": {
+      "value": 3,
+      "rationale": "Judgment (application layer): visible contender among AI app builders (e.g. Bolt, v0, Replit-style agents); durable differentiation not measured. Cursor is adjacent, not a same-category peer.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "medium"
+    }
+  },
+  "evidence": [
+    {
+      "id": "ev-001",
+      "type": "company_website",
+      "url": "https://lovable.dev",
+      "title": "Lovable homepage",
+      "publisher": "Lovable",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Positions Lovable as an AI app builder for creating apps and websites by chatting with AI, with describe / build / refine-and-ship workflow and templates.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-002",
+      "type": "docs",
+      "url": "https://docs.lovable.dev/introduction/subscription-plans",
+      "title": "Lovable subscription plans documentation",
+      "publisher": "Lovable",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Documents Free, Pro, Business, and Enterprise plans; credit grants; Git sync; code download; custom domains; SSO; and community/email/priority support tiers.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-003",
+      "type": "docs",
+      "url": "https://docs.lovable.dev/",
+      "title": "Lovable documentation welcome page",
+      "publisher": "Lovable",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Describes Lovable as a full-stack AI development platform for building and deploying web applications from natural language with editable code, GitHub sync, and multi-persona users.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-004",
+      "type": "pricing_page",
+      "url": "https://lovable.dev/pricing",
+      "title": "Lovable pricing page",
+      "publisher": "Lovable",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public pricing entry point with plan FAQs and links to plans/credits documentation.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-005",
+      "type": "other",
+      "url": "https://en.wikipedia.org/wiki/Lovable_(company)",
+      "title": "Lovable (company) — Wikipedia",
+      "publisher": "Wikipedia",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Secondary summary stating founding in Stockholm in 2023 by Anton Osika and Fabian Hedin; useful for identity fields, not for financial metrics.",
+      "confidence": "medium"
+    },
+    {
+      "id": "ev-006",
+      "type": "company_website",
+      "url": "https://lovable.dev/discord",
+      "title": "Join the Lovable Discord",
+      "publisher": "Lovable",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Official page inviting builders to the Lovable Discord community; distinguishes community help from official support.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-007",
+      "type": "company_website",
+      "url": "https://lovable.dev/community",
+      "title": "Join the Lovable Community",
+      "publisher": "Lovable",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Official community landing page describing Discord and in-person community programs for builders.",
+      "confidence": "high"
+    }
+  ],
+  "team": {
+    "founders": ["Anton Osika", "Fabian Hedin"],
+    "notes": "Founders listed from secondary public sources (Wikipedia). Not a complete org chart."
+  },
+  "competitors": ["bolt", "v0", "replit-agent"],
+  "last_reviewed": "2026-07-20",
+  "reviewers": ["hn-ready-pass"],
+  "extensions": {
+    "company_stage": "unknown",
+    "market_position": "AI-native app builder in the vibe-coding / AI app-builder category, oriented to idea-to-deployed-web-app workflows rather than IDE-native coding alone",
+    "differentiation": "Public positioning emphasizes natural-language full-stack app generation with editable code, workspaces, and Git handoff; durability versus Bolt/v0/Replit-style peers is not measured in this entry",
+    "distribution_channels": ["direct_web", "templates", "public_publish"],
+    "confidence_score": 4,
+    "confidence_notes": "Product identity, category, docs-backed capabilities, public plan structure, and official community surfaces are well supported. Funding, ARR, user counts, hiring, and competitive outcomes remain weakly evidenced or conflicting in secondary press. product_led removed: self-serve signup exists, but PLG expansion mechanics are not evidenced beyond direct web / templates / public publish surfaces.",
+    "adjacent_products": ["cursor"]
+  }
+}

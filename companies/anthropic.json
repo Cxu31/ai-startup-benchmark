@@ -1,0 +1,196 @@
+{
+  "schema_version": "2.0.0",
+  "id": "anthropic",
+  "name": "Anthropic",
+  "legal_name": "Anthropic, PBC",
+  "website": "https://www.anthropic.com",
+  "founded_year": 2021,
+  "hq": {
+    "city": "San Francisco",
+    "region": "CA",
+    "country": "US"
+  },
+  "status": "active",
+  "summary": "Anthropic develops the Claude family of large language models and related consumer, developer, and enterprise products.",
+  "tags": ["foundation-model", "llm", "ai-safety", "enterprise-ai"],
+  "product": {
+    "one_liner": "Claude models and products for chat, API access, and enterprise workflows",
+    "layer": "model",
+    "delivery": "hybrid",
+    "description": "Anthropic trains and serves Claude language models. Public product surfaces include Claude consumer/team chat products, a developer API, and enterprise offerings. Documented capabilities include general reasoning, coding assistance, tool use, and long-context workflows.",
+    "key_capabilities": [
+      "Claude language models",
+      "developer API",
+      "chat products for individuals and teams",
+      "enterprise deployment options",
+      "coding and tool-using workflows"
+    ]
+  },
+  "market": {
+    "customer_type": "mixed",
+    "primary_persona": "Developers, knowledge workers, and enterprise AI buyers",
+    "category": "Foundation models",
+    "problem": "Buyers need general-purpose language model systems they can access via products and APIs for assistants, coding, and internal workflows",
+    "geo_focus": ["global"]
+  },
+  "business_model": {
+    "primary": "mixed",
+    "notes": "Public surfaces include API usage pricing and subscription plans for Claude products; enterprise packaging is also described on company pages. Exact contract structures are not fully public.",
+    "pricing_visibility": "partial"
+  },
+  "ai_profile": {
+    "centrality": "core",
+    "dependency": "owns_models",
+    "model_strategy": "Trains and serves proprietary Claude models as the primary product substrate",
+    "data_advantage": "Public materials emphasize alignment/safety methods and product feedback loops; proprietary training data details are not fully disclosed",
+    "notes": "AI capability is the product: model training, serving, and assistant/API surfaces. Removing the models removes the company offering."
+  },
+  "traction": {
+    "signals": [
+      {
+        "label": "product_surface",
+        "value": "Public Claude chat, API docs, research publications index, and enterprise product pages are live",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-002", "ev-004"]
+      },
+      {
+        "label": "distribution_channels",
+        "value": "Direct web products plus developer API distribution",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-002"]
+      },
+      {
+        "label": "developer_activity",
+        "value": "Public API docs and developer-facing model documentation are available; research index publishes ongoing technical work",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-002", "ev-004"]
+      },
+      {
+        "label": "monetization_signals",
+        "value": "Public API pricing and Claude subscription plans are listed",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-003"]
+      }
+    ],
+    "notes": "No audited user, revenue, or usage metrics are included. community_signals and hiring_signals are omitted until sourced. Soft popularity claims are omitted."
+  },
+  "funding": {
+    "total_raised_usd": null,
+    "latest_round": null,
+    "latest_round_date": null,
+    "notable_investors": [],
+    "notes": "Public press cites large funding rounds with conflicting totals. Numeric fields remain null until a single dated primary or high-quality secondary source is attached.",
+    "evidence_ids": []
+  },
+  "framework_scores": {
+    "product": {
+      "value": 5,
+      "rationale": "Judgment: clear model + API + assistant product surfaces with coherent buyer paths; sharp packaging for a foundation-model lab.",
+      "evidence_ids": ["ev-001", "ev-002", "ev-004"],
+      "confidence": "high"
+    },
+    "market": {
+      "value": 4,
+      "rationale": "Judgment: foundation models are a clear, active category with identifiable lab peers. Capped at 4: no category-level demand source beyond company materials (homepage alone cannot justify 5).",
+      "evidence_ids": ["ev-001", "ev-002"],
+      "confidence": "medium"
+    },
+    "business_model": {
+      "value": 4,
+      "rationale": "Judgment: usage and subscription monetization are publicly visible; enterprise economics are only partially observable.",
+      "evidence_ids": ["ev-003"],
+      "confidence": "medium"
+    },
+    "technology": {
+      "value": 5,
+      "rationale": "Judgment (model layer): owns and serves frontier models rather than wrapping third-party APIs — rare depth within the foundation-model peer frame; public research program supports technical depth claims.",
+      "evidence_ids": ["ev-001", "ev-002", "ev-004"],
+      "confidence": "high"
+    },
+    "growth": {
+      "value": null,
+      "rationale": "Not scored: no sourced public growth metrics in this entry.",
+      "evidence_ids": [],
+      "confidence": "high"
+    },
+    "competitive_position": {
+      "value": 4,
+      "rationale": "Judgment (model layer): established frontier peer-set member with strong public brand; durable relative share versus OpenAI/Google/etc. is not measured here.",
+      "evidence_ids": ["ev-001"],
+      "confidence": "medium"
+    }
+  },
+  "evidence": [
+    {
+      "id": "ev-001",
+      "type": "company_website",
+      "url": "https://www.anthropic.com",
+      "title": "Anthropic homepage",
+      "publisher": "Anthropic",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Company and product overview for Claude models and Anthropic offerings.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-002",
+      "type": "docs",
+      "url": "https://docs.anthropic.com",
+      "title": "Anthropic API documentation",
+      "publisher": "Anthropic",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Developer documentation for Claude API access and model usage.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-003",
+      "type": "pricing_page",
+      "url": "https://www.anthropic.com/pricing",
+      "title": "Anthropic pricing",
+      "publisher": "Anthropic",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public pricing entry point for Claude products and API plans.",
+      "confidence": "medium"
+    },
+    {
+      "id": "ev-004",
+      "type": "docs",
+      "url": "https://www.anthropic.com/research",
+      "title": "Anthropic Research",
+      "publisher": "Anthropic",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public research index covering alignment, interpretability, economic research, societal impacts, and frontier red team work, with dated publications.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-005",
+      "type": "docs",
+      "url": "https://docs.anthropic.com/en/docs/welcome",
+      "title": "Intro to Claude — Anthropic Docs",
+      "publisher": "Anthropic",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Developer welcome docs describing Claude model families, Messages API, Managed Agents, and key capabilities (text/code/vision).",
+      "confidence": "high"
+    }
+  ],
+  "team": {
+    "founders": [],
+    "notes": "Founders omitted until a primary or attached secondary source is linked in evidence. Do not treat empty founders as a claim that founders are unknown in public reporting."
+  },
+  "competitors": ["openai", "google-deepmind", "meta-ai", "mistral-ai"],
+  "last_reviewed": "2026-07-20",
+  "reviewers": ["hn-ready-pass"],
+  "extensions": {
+    "company_stage": "unknown",
+    "market_position": "Frontier model lab offering Claude models plus consumer, developer, and enterprise product surfaces",
+    "differentiation": "Public positioning emphasizes safety/alignment research alongside frontier model capability; relative model quality versus peers is not independently measured in this entry",
+    "distribution_channels": ["direct_web", "developer_api", "enterprise_sales"],
+    "confidence_score": 4,
+    "confidence_notes": "Product, API docs, research publications index, and pricing surfaces are primary-sourced. Founders intentionally left empty without in-file evidence. Funding, traction metrics, hiring, and competitive outcomes remain weakly evidenced.",
+    "adjacent_products": []
+  }
+}

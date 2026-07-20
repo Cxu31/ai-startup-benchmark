@@ -1,0 +1,220 @@
+{
+  "schema_version": "2.0.0",
+  "id": "perplexity",
+  "name": "Perplexity",
+  "legal_name": "Perplexity AI, Inc.",
+  "website": "https://www.perplexity.ai",
+  "founded_year": 2022,
+  "hq": {
+    "city": "San Francisco",
+    "region": "CA",
+    "country": "US"
+  },
+  "status": "active",
+  "summary": "Perplexity is an AI search product that answers queries with web-grounded synthesized responses and numbered source citations, offered via a consumer web/app product and a developer API platform.",
+  "tags": ["ai-search", "answer-engine", "application", "consumer", "api"],
+  "product": {
+    "one_liner": "AI search product that returns web-grounded answers with source citations",
+    "layer": "application",
+    "delivery": "hybrid",
+    "description": "Perplexity provides a public web and app search/answer interface. Official Help Center and getting-started materials describe real-time web search, summarized answers, and numbered citations linking to sources. Paid individual plans (Pro, Max) are listed on the official pricing page. Developer documentation describes an API platform with Agent, Search, and Embeddings APIs for web-grounded answers, ranked search results, and embeddings.",
+    "key_capabilities": [
+      "real-time web search with synthesized answers",
+      "numbered citations / source transparency in answers",
+      "consumer web and mobile search/answer product",
+      "subscription tiers (Free, Pro, Max) on public pricing",
+      "Agent API for web-grounded answers and tool-enabled model access",
+      "Search API for ranked web results",
+      "Embeddings API for semantic search / RAG pipelines"
+    ]
+  },
+  "market": {
+    "customer_type": "mixed",
+    "primary_persona": "Consumers, knowledge workers, and developers building search or research features",
+    "category": "AI search",
+    "problem": "Users want timely answers drawn from the live web with visible sources, rather than navigating only ranked links or uncited chat responses",
+    "geo_focus": ["global"]
+  },
+  "business_model": {
+    "primary": "mixed",
+    "notes": "Public pricing lists Free ($0/month), Pro ($20/month), and Max ($200/month) for individuals, with Enterprise plan surfaces on the same pricing hub. Developer APIs are documented separately; usage billing details for API are not fully transcribed in this entry.",
+    "pricing_visibility": "public"
+  },
+  "ai_profile": {
+    "centrality": "core",
+    "dependency": "mixed",
+    "model_strategy": "Product and API docs emphasize web-grounded answering and search infrastructure; Agent API documentation also describes access to third-party models (e.g. OpenAI, Anthropic, Google, xAI) with web search tools. Help Center mentions selectable third-party models for Pro Search. Proprietary model details are not fully specified in the primary docs used here.",
+    "data_advantage": "Advantage depends on retrieval quality, citation UX, and query/feedback loops; extent of proprietary index or model advantage is not fully public in attached sources",
+    "notes": "AI capability is structural: without model-backed synthesis plus retrieval, the product collapses to conventional search links or a thin wrapper. Removing either search grounding or generative answering removes the core offering."
+  },
+  "traction": {
+    "signals": [
+      {
+        "label": "product_surface",
+        "value": "Public web product, Help Center product explainers, getting-started guide, and API documentation are live",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-003", "ev-006", "ev-007"]
+      },
+      {
+        "label": "distribution_channels",
+        "value": "Direct web access at perplexity.ai plus documented developer API distribution; mobile app store availability is described in official getting-started materials",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-003", "ev-007"]
+      },
+      {
+        "label": "developer_activity",
+        "value": "Public docs describe Agent, Search, and Embeddings APIs for builders",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-003"]
+      },
+      {
+        "label": "monetization_signals",
+        "value": "Official pricing hub lists Free, Pro ($20/month), Max ($200/month), and Enterprise plan surfaces",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-002", "ev-005"]
+      }
+    ],
+    "notes": "No query volume, MAU, ARR, or hiring metrics are included. Secondary press figures and Wikipedia traffic claims are omitted from traction signals. product_led is not claimed: self-serve signup exists, but PLG expansion mechanics are not evidenced beyond direct web access."
+  },
+  "funding": {
+    "total_raised_usd": null,
+    "latest_round": null,
+    "latest_round_date": null,
+    "notable_investors": [],
+    "notes": "Secondary sources report multiple large rounds and valuations with conflicting figures. Numeric fields remain null until a dated primary or high-quality single snapshot is attached.",
+    "evidence_ids": []
+  },
+  "framework_scores": {
+    "product": {
+      "value": 4,
+      "rationale": "Judgment: coherent AI search product with documented citations, clear consumer surface, and documented API surfaces. Strong for the category, not exceptional packaging beyond peers.",
+      "evidence_ids": ["ev-001", "ev-002", "ev-003", "ev-006", "ev-007"],
+      "confidence": "high"
+    },
+    "market": {
+      "value": 4,
+      "rationale": "Judgment: AI search is a clear, active category with identifiable same-category peers. Capped at 4: no independent category-level demand report attached (company materials alone cannot justify 5).",
+      "evidence_ids": ["ev-001", "ev-006", "ev-007"],
+      "confidence": "medium"
+    },
+    "business_model": {
+      "value": 4,
+      "rationale": "Judgment: public Free plus paid Pro/Max tiers and Enterprise surfaces provide a concrete mixed monetization path; API monetization is documented as a platform but not fully priced in this entry.",
+      "evidence_ids": ["ev-002", "ev-005"],
+      "confidence": "high"
+    },
+    "technology": {
+      "value": 3,
+      "rationale": "Judgment (application layer): meaningful search + LLM orchestration and API platform work versus AI-search peers; not scored as a frontier model lab. Within-layer frame only.",
+      "evidence_ids": ["ev-003", "ev-006"],
+      "confidence": "high"
+    },
+    "growth": {
+      "value": null,
+      "rationale": "Not scored: no sourced query volume, seats, or revenue metrics attached in this entry.",
+      "evidence_ids": [],
+      "confidence": "high"
+    },
+    "competitive_position": {
+      "value": 3,
+      "rationale": "Judgment (application layer): visible AI-search contender versus same-category peers (e.g. You.com); relative share and defensibility not measured. Traditional search and major chatbot assistants are treated as adjacent substitutes, not peer-set equals.",
+      "evidence_ids": ["ev-001", "ev-006", "ev-007"],
+      "confidence": "medium"
+    }
+  },
+  "evidence": [
+    {
+      "id": "ev-001",
+      "type": "company_website",
+      "url": "https://www.perplexity.ai",
+      "title": "Perplexity homepage",
+      "publisher": "Perplexity",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public product entry point for Perplexity search/answer experience (query interface and related product surfaces such as Computer).",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-002",
+      "type": "pricing_page",
+      "url": "https://www.perplexity.ai/hub/pricing",
+      "title": "Perplexity Pricing: Plans for Individuals and Enterprise",
+      "publisher": "Perplexity",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Lists Free ($0/month), Pro ($20/month), Max ($200/month), and Enterprise plan surfaces for individuals and organizations.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-003",
+      "type": "docs",
+      "url": "https://docs.perplexity.ai/",
+      "title": "Perplexity API Platform documentation",
+      "publisher": "Perplexity",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Documents Agent, Search, and Embeddings APIs for web-grounded answers, ranked search, and embeddings; Agent API notes third-party model access with web search tools.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-004",
+      "type": "other",
+      "url": "https://en.wikipedia.org/wiki/Perplexity_AI",
+      "title": "Perplexity AI — Wikipedia",
+      "publisher": "Wikipedia",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Secondary summary for legal name Perplexity AI, Inc.; founding in August 2022; founders Aravind Srinivas, Denis Yarats, Johnny Ho, Andy Konwinski; San Francisco HQ. Not used for funding or growth metrics.",
+      "confidence": "medium"
+    },
+    {
+      "id": "ev-005",
+      "type": "docs",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you.html",
+      "title": "Which Perplexity Subscription Plan is right for you?",
+      "publisher": "Perplexity Help Center",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Help Center article describing available subscription plans including Free, Pro, Max, Enterprise tiers, and API/Sonar references.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-006",
+      "type": "docs",
+      "url": "https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work",
+      "title": "How does Perplexity work?",
+      "publisher": "Perplexity Help Center",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "States that Perplexity searches the internet in real time, summarizes sources into an answer, and that each answer includes numbered citations linking to original sources; also describes source transparency as a core feature.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-007",
+      "type": "blog_post",
+      "url": "https://www.perplexity.ai/hub/blog/getting-started-with-perplexity",
+      "title": "Getting started with Perplexity",
+      "publisher": "Perplexity",
+      "published_at": "2024-10-01",
+      "accessed_at": "2026-07-20",
+      "snippet": "Official getting-started guide: real-time web answers with sources and citations; access via web and mobile apps; every answer includes clickable citations.",
+      "confidence": "high"
+    }
+  ],
+  "team": {
+    "founders": ["Aravind Srinivas", "Denis Yarats", "Johnny Ho", "Andy Konwinski"],
+    "notes": "Founders and legal identity sourced from Wikipedia (ev-004). Not a complete org chart."
+  },
+  "competitors": ["you-com"],
+  "last_reviewed": "2026-07-20",
+  "reviewers": ["review-fix-pass"],
+  "extensions": {
+    "company_stage": "unknown",
+    "market_position": "AI search application combining live-web retrieval with generative synthesis and citations; also offers developer search/answer APIs",
+    "differentiation": "Official materials emphasize cited, web-grounded answers versus link lists; durability versus adjacent traditional search and chatbot assistants is not measured in this entry",
+    "distribution_channels": ["direct_web", "developer_api"],
+    "confidence_score": 4,
+    "confidence_notes": "Product behavior (including citations), pricing, and API docs are primary-sourced. Founders/HQ rely on medium-confidence secondary summary. Funding, growth metrics, hiring, and competitive outcomes remain unsourced or conflicting in press.",
+    "adjacent_products": ["google-search", "openai-chatgpt", "microsoft-copilot", "anthropic"]
+  }
+}

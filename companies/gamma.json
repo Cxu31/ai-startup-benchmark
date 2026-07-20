@@ -1,0 +1,208 @@
+{
+  "schema_version": "2.0.0",
+  "id": "gamma",
+  "name": "Gamma",
+  "legal_name": "Gamma Tech, Inc.",
+  "website": "https://gamma.app",
+  "founded_year": 2020,
+  "hq": {
+    "city": "San Francisco",
+    "region": "CA",
+    "country": "US"
+  },
+  "status": "active",
+  "summary": "Gamma is an AI-native productivity application for generating and editing presentations and related documents/websites from prompts or uploaded files, with export and sharing options and a public generation API.",
+  "tags": ["ai-presentation", "productivity", "application", "documents", "saas"],
+  "product": {
+    "one_liner": "AI presentation and document creation from prompts, outlines, or uploaded files",
+    "layer": "application",
+    "delivery": "hybrid",
+    "description": "Gamma provides a web product for AI-assisted creation of presentations and related formats (including documents and websites on product surfaces). Official presentation product materials describe generating decks from prompts, outlines, or uploaded Word/PDF/Google Docs, applying themes, editing with AI assistance, presenting or sharing live links, and exporting to PowerPoint, PDF, or Google Slides. A free plan with starter AI credits is described. Developer documentation describes a public API to generate presentations, documents, websites, and social posts programmatically.",
+    "key_capabilities": [
+      "AI generation of presentations from prompts or documents",
+      "themes, layouts, and AI-assisted editing",
+      "present in-product, share live links, export to PPT/PDF/Google Slides",
+      "related creation surfaces for documents and websites",
+      "public generations API for presentations and other formats",
+      "free tier with starter AI credits; paid plan tiers on pricing page"
+    ]
+  },
+  "market": {
+    "customer_type": "mixed",
+    "primary_persona": "Knowledge workers, consultants, marketers, educators, and sales teams creating decks and related collateral",
+    "category": "AI presentation tools",
+    "problem": "Creating polished presentations and related collateral from scratch is slow; users want AI help to turn prompts or existing documents into structured, presentable decks they can edit and export",
+    "geo_focus": ["global"]
+  },
+  "business_model": {
+    "primary": "mixed",
+    "notes": "Official pricing page lists Free plus paid individual tiers (Plus, Pro, Ultra) and team/business evaluation via contact sales. Free includes limited AI generation (e.g. cards-per-prompt limits). Paid tiers unlock higher generation limits, branding controls, analytics, custom domains, and API access on higher plans per developer docs. Exact seat/month dollar figures are not transcribed here pending a stable pricing-page snapshot.",
+    "pricing_visibility": "public"
+  },
+  "ai_profile": {
+    "centrality": "core",
+    "dependency": "mixed",
+    "model_strategy": "Product experience centers on model-backed generation of copy, layouts, and visuals for presentations and related artifacts. Pricing/product materials reference access to advanced AI models on higher tiers; the company does not position itself as a foundation-model lab in attached primary sources.",
+    "data_advantage": "Potential advantage from presentation templates, layout systems, and usage loops; extent of proprietary model or data advantage is not fully public in attached sources",
+    "notes": "AI capability is structural: without generative creation of decks/content, the product collapses toward a conventional slide editor or template site."
+  },
+  "traction": {
+    "signals": [
+      {
+        "label": "product_surface",
+        "value": "Public web product, presentations product page, pricing page, and developer API docs are live",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-002", "ev-003", "ev-004"]
+      },
+      {
+        "label": "distribution_channels",
+        "value": "Direct web signup (start for free) plus documented developer API distribution; team evaluation via contact sales is listed on pricing",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001", "ev-002", "ev-004"]
+      },
+      {
+        "label": "developer_activity",
+        "value": "Public developer docs describe generations API, themes, export, analytics endpoints, and MCP server",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-004"]
+      },
+      {
+        "label": "monetization_signals",
+        "value": "Official pricing lists Free and paid Plus/Pro/Ultra tiers with AI usage limits; API keys require Pro/Ultra/Teams/Business per developer docs",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-002", "ev-004"]
+      }
+    ],
+    "notes": "Marketing counters such as '100 million people' or '250 million presentations generated' appear on product pages but are omitted from traction signals as unverified growth metrics. No ARR, seats, or hiring signals are included."
+  },
+  "funding": {
+    "total_raised_usd": null,
+    "latest_round": null,
+    "latest_round_date": null,
+    "notable_investors": [],
+    "notes": "Investor pages and press discuss seed/Series A activity (e.g. Accel company profile). Numeric raised totals and valuations remain null until a dated complete snapshot is attached.",
+    "evidence_ids": ["ev-005"]
+  },
+  "framework_scores": {
+    "product": {
+      "value": 4,
+      "rationale": "Judgment: coherent AI presentation/document creation workflow (prompt/upload → generate → edit → present/export) with clear consumer surface and API. Strong for the category, not exceptional beyond peers.",
+      "evidence_ids": ["ev-001", "ev-003", "ev-004"],
+      "confidence": "high"
+    },
+    "market": {
+      "value": 4,
+      "rationale": "Judgment: AI presentation tools are a clear, active application category with identifiable peers. Capped at 4: no independent category-level demand report attached (company materials alone cannot justify 5).",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "medium"
+    },
+    "business_model": {
+      "value": 4,
+      "rationale": "Judgment: public Free plus paid tiers and documented API gating provide a concrete monetization path; dollar prices not fully transcribed in this entry.",
+      "evidence_ids": ["ev-002", "ev-004"],
+      "confidence": "high"
+    },
+    "technology": {
+      "value": 3,
+      "rationale": "Judgment (application layer): meaningful product orchestration for generation, layout, themes, export, and API versus AI-presentation peers; not frontier-model ownership. Within-layer frame only.",
+      "evidence_ids": ["ev-003", "ev-004"],
+      "confidence": "high"
+    },
+    "growth": {
+      "value": null,
+      "rationale": "Not scored: marketing generation/user counters are not treated as verified growth metrics; no sourced ARR or seats attached.",
+      "evidence_ids": [],
+      "confidence": "high"
+    },
+    "competitive_position": {
+      "value": 3,
+      "rationale": "Judgment (application layer): visible contender among AI presentation tools (e.g. Beautiful.ai, Tome); relative share and defensibility not measured. Broader productivity suites and general AI assistants are adjacent, not peer-set equals.",
+      "evidence_ids": ["ev-001", "ev-003"],
+      "confidence": "medium"
+    }
+  },
+  "evidence": [
+    {
+      "id": "ev-001",
+      "type": "company_website",
+      "url": "https://gamma.app/",
+      "title": "Gamma homepage",
+      "publisher": "Gamma",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Positions Gamma as AI design for presentations, websites, and more; free tier with starter AI credits; copyright Gamma Tech, Inc.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-002",
+      "type": "pricing_page",
+      "url": "https://gamma.app/pricing",
+      "title": "Plans and pricing | Gamma",
+      "publisher": "Gamma",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Lists Free, Plus, Pro, and Ultra plan surfaces with AI generation limits (cards per prompt), branding/analytics/custom domains on higher tiers, and contact sales for teams; notes SOC 2 Type II.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-003",
+      "type": "company_website",
+      "url": "https://gamma.app/products/presentations",
+      "title": "AI Deck Generator | Build Winning Presentations | Gamma.app",
+      "publisher": "Gamma",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Describes creating decks from prompts, outlines, or uploaded docs; themes; AI suggestions; present/share; export to PowerPoint, PDF, or Google Slides; free plan with starter AI credits.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-004",
+      "type": "docs",
+      "url": "https://developers.gamma.app/",
+      "title": "Gamma Developer Docs",
+      "publisher": "Gamma",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Public API to generate presentations, documents, websites, and social posts; API key required; Pro/Ultra/Teams/Business for API key access; generations, export, analytics, MCP server documented.",
+      "confidence": "high"
+    },
+    {
+      "id": "ev-005",
+      "type": "other",
+      "url": "https://www.accel.com/companies/gamma",
+      "title": "Accel | Gamma",
+      "publisher": "Accel",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Investor company profile listing founders Grant Lee, Jon Noronha, and James Fox; describes Gamma as an AI-powered presentation platform; notes seed investment dating from 2021.",
+      "confidence": "medium"
+    },
+    {
+      "id": "ev-006",
+      "type": "news_article",
+      "url": "https://www.jpmorgan.com/insights/technology/artificial-intelligence/gammas-startup-journey-the-future-of-presentations-with-ai",
+      "title": "Gamma's Startup Journey: The Future of Presentations with AI",
+      "publisher": "J.P. Morgan",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Secondary profile describing co-founding with Grant Lee, James Fox, and Jon Noronha; San Francisco collaboration; seed funding in 2021 and public beta in 2022. Used for founding context / HQ signal, not for ARR or growth metrics.",
+      "confidence": "medium"
+    }
+  ],
+  "team": {
+    "founders": ["Grant Lee", "Jon Noronha", "James Fox"],
+    "notes": "Founders listed from Accel company profile (ev-005), consistent with J.P. Morgan profile (ev-006). Not a complete org chart."
+  },
+  "competitors": ["beautiful-ai", "tome"],
+  "last_reviewed": "2026-07-20",
+  "reviewers": ["entry-checklist-pass"],
+  "extensions": {
+    "company_stage": "unknown",
+    "market_position": "AI presentation / productivity application focused on generating and editing decks and related documents/websites, with export to common office formats and a generations API",
+    "differentiation": "Official materials emphasize prompt-to-deck generation with themes/layouts and multi-format export; durability versus Beautiful.ai/Tome and adjacent suites is not measured here",
+    "distribution_channels": ["direct_web", "developer_api", "enterprise_sales"],
+    "confidence_score": 4,
+    "confidence_notes": "Product workflow, pricing tier structure, and API docs are primary-sourced. Founders/founding year rely on medium-confidence secondary/investor sources. Exact public dollar prices, funding totals, and growth metrics remain thin or omitted.",
+    "adjacent_products": ["canva", "microsoft-powerpoint", "google-slides", "notion", "chatgpt"]
+  }
+}
