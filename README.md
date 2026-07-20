@@ -1,135 +1,230 @@
 # AI Startup Benchmark
 
-A structured intelligence benchmark for understanding AI-native companies.
+A research benchmark and structured intelligence dataset for understanding AI-native companies.
 
-This is a research benchmark and structured dataset — not application source code, not a ChatGPT wrapper, not a ranking leaderboard, and not a marketing site.
+This repository is a documentation and data project. It is not application source code, not a ChatGPT wrapper, and not a product marketing site.
 
 ## Overview
 
-Information about AI startups is scattered across product sites, pricing pages, GitHub activity, community discussion, hiring pages, and occasional public market signals. Individually, each source is incomplete. Together, they are hard to compare because every write-up uses different categories, different levels of confidence, and different definitions of “AI-native.”
+AI startups are hard to understand from public materials alone. Product copy, pricing pages, GitHub activity, hiring pages, community discussion, and occasional market signals are scattered and written for different audiences. The same company can look like infrastructure, a consumer app, or a “platform” depending on which page you read.
 
-A structured benchmark is useful because it forces the same questions onto every company:
+Traditional startup databases often emphasize funding rounds, headcount, or category tags. Those fields are useful, but they usually do not capture how an AI product actually works: where it sits in the stack, how strongly it depends on models, how it monetizes usage, or which growth signals are publicly observable.
 
-- What is the product, and where does it sit in the stack?
-- Who is the customer, and what problem is being sold against?
-- How does the business make money?
-- How central is AI to the product versus the pitch?
-- What evidence supports each claim?
+This project defines a shared structure for collecting and comparing AI-native companies across product positioning, business model, growth signals, competitive context, and related market opportunity notes—so analysis can be inspected, revised, and extended in git.
 
-The goal is not a scoreboard for hype. The goal is a shared format for reading AI companies carefully.
+## Research Questions
 
-## Why This Exists
+The benchmark is designed to support careful comparison within a shared schema. It helps organize publicly available evidence around questions such as:
 
-Most public commentary about AI startups is narrative: launch posts, funding notes, feature lists, and hot takes. Those are useful, but they rarely support systematic comparison.
+- How do AI-native companies describe and structure their products?
+- How do companies position AI capability relative to the core offering?
+- Which business and pricing models are visible in public materials?
+- What growth-related signals are publicly observable, when present?
+- How do foundation-model labs differ from application-layer AI products on comparable axes?
 
-Understanding why some AI companies compound and others stall usually requires looking across multiple signals at once — product surface, distribution, model dependency, competitive set, and growth evidence — rather than treating any single page or article as complete.
+Answers are provisional and evidence-bound. The dataset is a research artifact for structured comparison, not a forecasting or valuation model.
 
-This repository exists to build a structured framework for comparing AI companies across:
+## Dataset Scope
 
-- product
-- market
-- business model
-- growth signals
+Each company profile aims to capture structured intelligence across dimensions such as:
 
-and to keep those comparisons inspectable in git.
+| Dimension | Focus |
+|-----------|--------|
+| Product positioning | What is shipped and how it is described |
+| Target users | Primary buyers / users and problem framing |
+| Core features | Capabilities that define the product |
+| Pricing model | Public pricing shape and visibility |
+| Business model | How monetization appears to work |
+| Market category | Peer category used for comparison |
+| Competitive landscape | Same-category peers and adjacent products |
+| Growth signals | Public traction indicators when sourced |
+| Technology indicators | Model dependency, stack layer, and related signals |
+| Evidence & scores | Sources, confidence, and structured judgments |
+
+Unknown or unavailable fields are left empty or set to `null`. Missing or unavailable information is represented as `null` rather than estimated. Incomplete records are preferred over fabricated precision.
+
+## Dataset Structure
+
+Company profiles live as versioned JSON files under [`companies/`](./companies/), one file per company (`companies/<id>.json`).
+
+**Simplified example** (illustrative only; not a complete record). Real profiles include additional optional fields such as `funding`, `team`, `tags`, and `extensions`:
+
+```json
+{
+  "schema_version": "2.0.0",
+  "id": "example-ai",
+  "name": "Example AI",
+  "legal_name": null,
+  "website": "https://example.ai",
+  "founded_year": 2024,
+  "status": "active",
+  "summary": "Short neutral description of the company and product.",
+  "product": {
+    "one_liner": "One-line product description",
+    "layer": "application",
+    "delivery": "saas",
+    "description": "Longer product description from public materials.",
+    "key_capabilities": ["capability-a", "capability-b"]
+  },
+  "market": {
+    "customer_type": "developer",
+    "primary_persona": "Primary user or buyer",
+    "category": "AI developer tools",
+    "problem": "Problem the product addresses",
+    "geo_focus": ["global"]
+  },
+  "business_model": {
+    "primary": "subscription",
+    "notes": null,
+    "pricing_visibility": "public"
+  },
+  "ai_profile": {
+    "centrality": "core",
+    "dependency": "mixed",
+    "model_strategy": null,
+    "data_advantage": null,
+    "notes": null
+  },
+  "traction": {
+    "signals": [
+      {
+        "label": "product_surface",
+        "value": "Public product site is live",
+        "as_of": "2026-07-20",
+        "evidence_ids": ["ev-001"]
+      }
+    ],
+    "notes": null
+  },
+  "competitors": ["peer-company-a"],
+  "framework_scores": {
+    "product": {
+      "value": 4,
+      "rationale": "Judgment: brief rationale",
+      "evidence_ids": ["ev-001"],
+      "confidence": "medium"
+    },
+    "market": {
+      "value": 4,
+      "rationale": "Judgment: brief rationale",
+      "evidence_ids": ["ev-001"],
+      "confidence": "medium"
+    },
+    "business_model": {
+      "value": 4,
+      "rationale": "Judgment: brief rationale",
+      "evidence_ids": ["ev-001"],
+      "confidence": "high"
+    },
+    "technology": {
+      "value": 3,
+      "rationale": "Judgment: brief rationale",
+      "evidence_ids": ["ev-001"],
+      "confidence": "medium"
+    },
+    "growth": {
+      "value": null,
+      "rationale": "Not scored: insufficient public growth evidence",
+      "evidence_ids": [],
+      "confidence": "high"
+    },
+    "competitive_position": {
+      "value": 3,
+      "rationale": "Judgment: brief rationale",
+      "evidence_ids": ["ev-001"],
+      "confidence": "medium"
+    }
+  },
+  "evidence": [
+    {
+      "id": "ev-001",
+      "type": "company_website",
+      "url": "https://example.ai",
+      "title": "Example homepage",
+      "publisher": "Example AI",
+      "published_at": null,
+      "accessed_at": "2026-07-20",
+      "snippet": "Short source note",
+      "confidence": "high"
+    }
+  ],
+  "last_reviewed": "2026-07-20"
+}
+```
+
+Field definitions, enums, evidence rules, and scoring dimensions are documented in:
+
+- [`SCHEMA.md`](./SCHEMA.md) — methodology and field definitions
+- [`VOCABULARY.md`](./VOCABULARY.md) — controlled vocabularies
+- [`companies/company.schema.json`](./companies/company.schema.json) — JSON Schema (`schema_version` `2.0.0`)
+- [`ARCHITECTURE.md`](./ARCHITECTURE.md) — layered research model
+
+Official scores use `framework_scores` (product, market, business_model, technology, growth, competitive_position). Scores are designed for contextual comparison within this dataset and should not be interpreted as universal rankings.
 
 ## Benchmark Methodology
 
-This project uses **AI-assisted intelligence research**, not AI-generated content as an end product.
+**Selection.** The initial set spans foundation-model and application-layer AI companies with enough public product surface to map into the schema. Coverage will expand as entries meet the evidence bar.
 
-| Role | Responsibility |
-|------|----------------|
-| AI assistance | Helps collect, normalize, and organize publicly available information |
-| Humans | Design the schema, categories, evaluation dimensions, and validation rules |
-| Humans | Review and validate entries before they are treated as benchmark-ready |
+**Collection.** Information is gathered from public sources such as company websites, pricing pages, documentation, and reputable secondary references when needed for identity fields.
 
-In practice:
+**Structuring.** Claims are mapped into fixed fields. Important statements should cite evidence IDs. Judgments are separated from descriptive facts and recorded in score rationales.
 
-1. Public information is gathered and mapped into a fixed schema.
-2. Claims that matter are attached to evidence where possible.
-3. Scores and judgments are recorded as explicit fields with rationale — not buried in prose.
-4. Unknown or weakly evidenced values stay `null` / omitted rather than fabricated.
-5. Entries are revised when better sources appear.
+**Quality.** Entries follow [`companies/ENTRY_CHECKLIST.md`](./companies/ENTRY_CHECKLIST.md): minimum evidence set, controlled labels for traction and distribution channels, peer-set rules for competitors, and calibration rules for scores. Human review defines schema and validation standards; AI assistance may help collect and organize public information.
 
-AI speeds up collection and structuring. It does not define what “good” means. The schema and evaluation dimensions are human-designed and remain the source of truth for the benchmark.
+This methodology supports reproducibility and review. It does not claim laboratory measurement accuracy or complete market coverage.
 
-## Current Benchmark
+## Limitations
 
-The initial company set:
+- **Not a ranking system.** This project is not a ranking system. Profiles and scores are for contextual comparison within this dataset, not universal rankings or “best company” claims.
+- **Public-source dependency.** Entries rely on publicly available materials. Private metrics, contracts, and internal roadmaps are out of scope.
+- **Incomplete coverage.** The initial company set is small and illustrative. Absence from the dataset is not a quality judgment.
+- **Null over estimation.** Missing or unavailable information is represented as `null` rather than estimated.
+- **Judgment vs measurement.** `framework_scores` are structured human judgments with rationales and evidence links; they are not audited performance metrics.
 
-| Company | Focus (high level) |
-|---------|--------------------|
-| Anthropic | Foundation models |
-| Cursor | AI-native developer environment |
-| Lovable | AI application / product generation |
-| Perplexity | AI search / answer products |
-| Gamma | AI presentation / content tools |
+## Example Companies
 
-This set is a starting slice across model labs and application-layer products. The benchmark will expand gradually as the schema stabilizes and more entries meet the evidence bar.
+The current dataset is a small cross-category sample. It demonstrates the benchmark framework and schema in practice; it is not a comprehensive ranking or leaderboard.
 
-Example profiles and analyses currently live under [`companies/`](./companies/) and [`reports/`](./reports/).
+Profiles currently included:
 
-## Data Structure
+| Company | Category |
+|---------|----------|
+| [Anthropic](./companies/anthropic.json) | Foundation models |
+| [Cursor](./companies/cursor.json) | AI developer tools |
+| [Lovable](./companies/lovable.json) | AI app builders |
+| [Perplexity](./companies/perplexity.json) | AI search |
+| [Gamma](./companies/gamma.json) | AI presentation tools |
 
-Each company entry is a versioned JSON profile. The main dimensions:
+Cross-company notes live under [`reports/`](./reports/).
 
-| Dimension | What it captures |
-|-----------|------------------|
-| **Product** | What is shipped, stack layer, delivery model, capabilities |
-| **Market** | Customer type, persona, category, problem framing |
-| **Business Model** | Monetization and pricing visibility |
-| **AI Profile** | How central AI is, and how the product depends on models/data |
-| **Competitive Position** | Peer set and positioning notes |
-| **Growth Signals** | Public traction indicators, when sourced |
-| **Evidence** | URLs, dates, snippets, and confidence labels |
-| **Scores** | Official `framework_scores` dimensions with written rationale |
-| **Confidence Score** | How reliable the overall entry is, given source coverage |
+Only companies with corresponding JSON files under [`companies/`](./companies/) are listed above.
 
-Scores are intended for structured comparison within context, not as a universal ranking system.
+## Use Cases
 
-Design constraints for every entry:
+Possible readers and users:
 
-- **Comparable** — same fields and score axes across companies
-- **Traceable** — important claims can point to evidence IDs
-- **Versionable** — plain JSON in git, so revisions are reviewable
+- AI founders comparing product and monetization patterns
+- Researchers studying AI-native company structure
+- Investors seeking an inspectable public-data framework (not investment advice)
+- Product strategists mapping categories and peer sets
+- Developers building AI applications who want clearer category language
 
-Field definitions and enums are documented in [`SCHEMA.md`](./SCHEMA.md). Controlled vocabularies and the entry checklist live in [`SCHEMA.md`](./SCHEMA.md#controlled-vocabularies) and [`companies/ENTRY_CHECKLIST.md`](./companies/ENTRY_CHECKLIST.md). The research model is described in [`ARCHITECTURE.md`](./ARCHITECTURE.md). The machine-readable schema is [`companies/company.schema.json`](./companies/company.schema.json).
+## Relationship with Rivallens
 
-## Transparency
+Rivallens is an AI-powered analysis system that explores startup products through structured signals such as business models, pricing, competition, and growth indicators. This repository focuses on the benchmark and structured dataset.
 
-**Public in this repository**
+## Roadmap
 
-- benchmark company data
-- schema and documentation
-- research methodology
-- analysis examples
-
-**Private / not published here**
-
-- production collection pipeline
-- internal prompts
-- proprietary evaluation logic used in production systems
-
-The intent is to share a useful, inspectable intelligence format and sample dataset, while keeping the operational system that produces production-grade updates out of scope for this repo.
+- Additional AI company profiles that meet the evidence checklist
+- Incremental schema improvements (additive fields, clearer rubrics)
+- Richer structured signals where public sources allow
+- Community contributions via reviewed, sourced updates
 
 ## Contributing
 
 Before adding or updating a company file, complete [`companies/ENTRY_CHECKLIST.md`](./companies/ENTRY_CHECKLIST.md).
 
-Feedback is welcome on:
-
-- schema improvements
-- new evaluation dimensions
-- corrections to benchmark data
-- clearer evidence standards
-
-Contributions that improve the framework — definitions, validation rules, or well-sourced company updates — are more valuable than large unverified dumps.
-
-Open an issue describing the proposed change and the sources behind it. Prefer small, checkable diffs.
-
-## About
-
-This benchmark is developed alongside Rivallens, an AI startup intelligence platform focused on analyzing AI products and market signals. The repository stands on its own as an open research artifact: schema, methodology, and structured company data for anyone studying AI-native companies.
+Prefer small, checkable diffs with sources. Schema and vocabulary changes should be documented in [`SCHEMA.md`](./SCHEMA.md) / [`VOCABULARY.md`](./VOCABULARY.md).
 
 ## License
 

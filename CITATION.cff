@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata from this file."
+type: dataset
+title: "AI Startup Benchmark"
+authors:
+  - family-names: Cai
+    given-names: Xu
+repository-code: "https://github.com/Cxu31/ai-startup-benchmark"
+license: MIT
